@@ -473,3 +473,10 @@ gradle-app.setting
 *.hprof
 
 # End of https://www.toptal.com/developers/gitignore/api/java,python,intellij,pycharm,gradle,macos,windows
+
+.idea/**
+
+gradlew.bat
+gradlew
+settings.gradle
+.idea/gradle.xml
