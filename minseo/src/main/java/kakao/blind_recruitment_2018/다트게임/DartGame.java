@@ -1,4 +1,4 @@
-package level1.dartgame;
+package kakao.blind_recruitment_2018.다트게임;
 
 import static java.lang.Math.*;
 
