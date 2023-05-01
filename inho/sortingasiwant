@@ -1,0 +1,5 @@
+def solution(strings, n):
+    answer = []
+    for i in range(len(strings)):
+        strings[i]=strings[i][n]+strings[i]
+    return [s[1:] for s in sorted(strings)]
