@@ -1,0 +1,12 @@
+def solution(food):
+    answer=''
+    for i in range(len(food)):
+        if food[i]>1 and food[i]%2==1:
+            for j in range((food[i]-1)//2):
+                answer+=str(i)
+        elif food[i]>1 and food[i]%2==0:
+            for j in range(food[i]//2):
+                answer+=str(i)
+        elif food[i]<=1:
+            continue
+    return answer+'0'+answer[::-1]
