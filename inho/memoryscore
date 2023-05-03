@@ -1,0 +1,9 @@
+def solution(name, yearning, photo):
+    answer = []
+    mapping=dict(zip(name,yearning))
+    for i in photo:
+        total=0
+        for j in i:
+            total+=mapping.get(j,0)   # 딕셔너리에서 지정한 키의 값을 반환하는 get()
+        answer.append(total)
+    return answer
