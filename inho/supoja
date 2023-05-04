@@ -1,0 +1,19 @@
+def solution(answers):
+    answer = [0,0,0]                     #수포자 각각의 정답개수 배열
+    first=[1,2,3,4,5]
+    second=[2,1,2,3,2,4,2,5]
+    third=[3,3,1,1,2,2,4,4,5,5]
+    result=[]
+    for i,j in enumerate(answers):       #i는 인덱스, j는 정답(1~5)
+        if j==first[i%len(first)]:       #각각의 패턴수만큼 나머지를 이용해서 반복되게
+            answer[0]+=1
+        if j==second[i%len(second)]:
+            answer[1]+=1
+        if j==third[i%len(third)]:
+            answer[2]+=1
+
+    for k,l in enumerate(answer):         #k는 인덱스, l은 정답개수
+        if l==max(answer):
+            result.append(k+1)            #최다정답자의 인덱스+1
+                                          #정답개수가 같아도 저절로 오름차순으로 받음
+    return result
