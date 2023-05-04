@@ -1,0 +1,10 @@
+def solution(n):
+    primes = [False]+[False]+[True] * (n-1)  # 0과 1은 소수가 아니므로 False값을 가짐
+                                             # 0부터 n까지 모든 수의 리스트 생성
+
+    for i in range(2, int(n**0.5)+1):        # 2부터 n의 제곱근까지 중
+        if primes[i]:
+            for j in range(i*2, n+1, i):     # i의 배수찾기(i*2부터 n+1까지 i만큼 증가)
+                primes[j] = False            # 배수들은 소수가 아니므로 False
+
+    return len([i for i in range(2, n+1) if primes[i]])  # 소수만 추출
