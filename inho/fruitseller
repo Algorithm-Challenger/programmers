@@ -1,0 +1,12 @@
+def solution(k, m, score):
+    answer = 0
+    apple=[]
+    score.sort(reverse=True)
+    for i in range(0,len(score),m):
+        apple.append(score[i:i+m])
+    for j in range(len(apple)):
+        if len(apple[j])<m:
+            answer+=0
+        elif len(apple[j])==m:
+            answer+=(min(apple[j])*m)
+    return answer
